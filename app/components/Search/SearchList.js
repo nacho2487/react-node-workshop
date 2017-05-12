@@ -1,8 +1,18 @@
 import React from 'react';
+import SearchItem from './SearchItem'
 
 class SearchList extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
-    return (<div className="list"></div>)
+    return (
+      <ul className="list">
+        {this.props.items.map((item) => {
+          return <SearchItem item={item} key={item.title} />
+        })}
+      </ul>
+    )
   }
 }
 

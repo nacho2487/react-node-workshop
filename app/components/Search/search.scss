@@ -1,0 +1,28 @@
+
+.item {
+
+  list-style: none;
+  border-bottom: 1px solid #EEE;
+  padding: 16px;
+  width: 100%;
+  height: 212px;
+  .image img{
+    float: left;
+    width: 180px;
+    height: 180px;
+  }
+  .item-info {
+    float: left;
+    margin-left: 16px;
+  }
+  h3 {
+    font-size: 18px;
+    color: #666;
+  }
+  .price {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 32px;
+    margin-top: 16px;
+  }
+}
