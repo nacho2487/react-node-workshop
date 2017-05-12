@@ -9,9 +9,7 @@ import SearchList from '../Search/SearchList'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      items: []
-    };
+
     this.onSearchChange = this.onSearchChange.bind(this);
   }
   onSearchChange(text) {
@@ -21,9 +19,7 @@ class App extends React.Component {
         return response.json()
       })
       .then(function(response){
-          that.setState({
-            items: response
-          });
+        console.log(response)
       });
   }
   render() {
@@ -31,7 +27,6 @@ class App extends React.Component {
         <div>
           <Header onSearchChange={this.onSearchChange} />
           <div className="container">
-            <SearchList items={this.state.items}  />
           </div>
           <Footer />
         </div>
