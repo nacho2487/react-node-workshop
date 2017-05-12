@@ -8,9 +8,6 @@ class SearchList extends React.Component {
   render() {
     return (
       <ul className="list">
-        {this.props.items.map((item) => {
-          return <SearchItem item={item} key={item.title} />
-        })}
       </ul>
     )
   }

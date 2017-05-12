@@ -9,29 +9,14 @@ import SearchList from '../Search/SearchList'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      items: []
-    };
-    this.onSearchChange = this.onSearchChange.bind(this);
   }
-  onSearchChange(text) {
-    let that = this;
-    fetch(`/api/search?q=${text}`)
-      .then((response) => {
-        return response.json()
-      })
-      .then(function(response){
-          that.setState({
-            items: response
-          });
-      });
-  }
+
   render() {
       return (
         <div>
-          <Header onSearchChange={this.onSearchChange} />
+          <Header />
           <div className="container">
-            <SearchList items={this.state.items}  />
+            <SearchList  />
           </div>
           <Footer />
         </div>
